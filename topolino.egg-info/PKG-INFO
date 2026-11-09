@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: topolino
+Version: 0.1.3
+Summary: Fourier optics and wave propagation utilities
+Author-email: Rachel Migdal <rmigdal2007@gmail.com>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/rmig27/projectTopolino
+Keywords: fourier optics,wave propagation,physics,optics
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scikit-image
+Provides-Extra: dev
+Requires-Dist: jupyter; extra == "dev"
+Requires-Dist: matplotlib; extra == "dev"
+
+# projectTopolino
+
+ramigdal@lbl.gov, awojdyla@lbl.gov
+![Topolino](assets/topolino_logo.png)
+
+This repository is a Python toolkit for exploring paraxial wave propagation and related optical phenomena. At its core is a Fresnel propagator `propTF` that uses NumPy's FFT to propagate a complex field through space. The package includes routines for generating Gaussian beams, extracting the RMS beam radius from intensity moments, and directly comparing the numerical propagation to the analytical Gaussian‑beam law.
+A collection of Jupyter notebooks demonstrates a range of topics: a thin‑lens model, creation and propagation of spiral beams, diffraction patterns of transmission gratings, and a full grating‑experiment simulation that includes a light source, propagation to a grating, and observation of resulting orders. The notebooks expose parameters (wavelength , aperture size, grating period, vortex charge, ...), visualize results with 1‑D plots, RMS‑size versus distance curves, and 2‑D intensity maps, and provide side‑by‑side comparisons with analytical predictions where available.
+
+![Propagation](assets/propagation.png)
